@@ -1,2 +1,0 @@
-# moiPotugi
-Задание для FSD
