@@ -7,8 +7,8 @@ import './js/'
 // SCSS
 import './assets/scss/main.scss'
 
-// inport BEM SCSS
-// import './pug/includes/**/*.scss'
+// inport BEM JS
+import './pug/includes/**/*.js'
 
 // CSS (example)
 // import './assets/css/main.css'
