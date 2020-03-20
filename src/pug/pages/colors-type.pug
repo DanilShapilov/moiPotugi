@@ -1,0 +1,15 @@
+extends ../layout/main
+
+block variables
+  - var title = 'Colors & Type'
+  - var description = 'Colors & Type description'
+
+block header
+  include ../includes/modules/header
+
+block content
+  section
+    .container
+      +item('item title', 'item desc')
+      +item('item title', 'item desc')
+      +item('item title', 'item desc')

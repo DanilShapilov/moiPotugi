@@ -1,13 +1,10 @@
 extends ../layout/main
 
 block variables
-  - var title = 'Webpack + pug'
-  - var description = 'description Webpack + pug'
-  - var pageClass = 'index-page'
+  - var title = 'Index page'
+  - var description = 'Index page description'
 
 block content
   section
     .container
-      +item('item title', 'item desc')
-      +item('item title', 'item desc')
-      +item('item title', 'item desc')
+      a(href="colors-type.html") Colors & types

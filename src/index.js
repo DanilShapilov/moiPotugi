@@ -7,6 +7,9 @@ import './js/'
 // SCSS
 import './assets/scss/main.scss'
 
+// inport BEM SCSS
+
+
 // CSS (example)
 // import './assets/css/main.css'
 
