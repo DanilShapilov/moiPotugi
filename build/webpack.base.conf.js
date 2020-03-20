@@ -63,7 +63,9 @@ module.exports = {
       {
         // JavaScript
         test: /\.js$/,
-        loader: "babel-loader",
+        use: ['webpack-import-glob-loader',
+        {loader: "babel-loader"}],
+        
         exclude: "/node_modules/"
       },
       // {
@@ -96,7 +98,9 @@ module.exports = {
         // scss
         test: /\.scss$/,
         use: [
+           
           "style-loader",
+          
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
@@ -112,7 +116,8 @@ module.exports = {
           {
             loader: "sass-loader",
             options: { sourceMap: true }
-          }
+          },
+          'webpack-import-glob-loader'
         ]
       },
       {

@@ -104,4 +104,4 @@ section,
 
 // Modules:
 // example: @import "modules/my-module.scss";
-@import "../../pug/includes/modules/header.scss";
+@import "../../pug/includes/modules/**/*.scss";
