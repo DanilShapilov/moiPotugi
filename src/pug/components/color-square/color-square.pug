@@ -1,5 +1,9 @@
 include ../text/text
 
-.color-square-wrapper
+mixin color-square(colorName,colorHex,colorProvided)
   .color-square
-    +text('h1','hello').color-square_text--text
+    div(class=`color-square_square color-square_square--${colorProvided}`)
+
+    .color-square_text-wrapper.color-square_text.h2-ref
+      +text('h2',colorName)
+      +text('h2',colorHex).color-square_text--weight-regular
