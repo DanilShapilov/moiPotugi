@@ -1,0 +1,38 @@
+// default text style - from html and body tags from main.scss
+.text{
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+}
+
+.h1-ref{
+  font-family: 'Conv_Montserrat-Regular';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-color;
+}
+
+.h2-ref{
+  font-family: 'Conv_Quicksand-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: $dark-color;
+}
+
+.h3-ref{
+  font-family: 'Conv_Montserrat-Bold';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: $dark-color;
+
+  text-transform: uppercase;
+}

@@ -1,9 +1,6 @@
 /* Vars:
    ========================================================================== */
 
-// Font
-$mainFont                : 'Conv_Montserrat-Regular' sans-serif;
-
 // Colors
 $dark-color              : #1F2041;
 $dark-75-color           : rgba(31, 32, 65, 0.75);
@@ -17,11 +14,15 @@ $secondary-color         : #6FCF97;
 $primary-linear-gradient  : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 $secondary-linear-gradient: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 
-// Size
+// Font
+$mainFont                : 'Conv_Montserrat-Regular', sans-serif;
+
 $mainFontColor           : $dark-75-color;
 $mainFontSize            : 14px;
 $mainFontWeight          : normal;
 $mainLineHeight          : 24px;
+
+// Size
 
 $desktopWidth            : 1440px;
 $smDesktopWidth          : 1024px;

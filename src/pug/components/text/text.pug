@@ -1,0 +1,9 @@
+mixin text(tag,string)
+  //- &attributes adds passed attributes to a teg
+  -var elClass = attributes.class;
+
+  //- 
+    text class is default text style setted in main.scss for html and body tags, so I removed it 
+    #{tag}(class=`text ${elClass}`)=string
+  
+  #{tag}(class=`${elClass}`)=string

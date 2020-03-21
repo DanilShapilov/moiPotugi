@@ -4,12 +4,13 @@ block variables
   - var title = 'Colors & Type'
   - var description = 'Colors & Type description'
 
-block header
-  include ../components/header/header
+//- block header
+//-   include ../components/header/header
 
 block content
   section
     .container
-      +item('item title', 'item desc')
-      +item('item title', 'item desc')
-      +item('item title', 'item desc')
+      include ../components/color-square/color-square
+      //- +item('item title', 'item desc')
+      //- +item('item title', 'item desc')
+      //- +item('item title', 'item desc')
