@@ -23,10 +23,17 @@ const PATHS = {
 // Pages const for HtmlWebpackPlugin
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
 // const PAGES_DIR = PATHS.src;
-const PAGES_DIR = `${PATHS.src}/pug/pages`;
+
+const PAGES_DIR = `${PATHS.src}/pug/pages`
+
 const PAGES = fs
-  .readdirSync(PAGES_DIR)
-  .filter(fileName => fileName.endsWith(".pug"));
+  .readdirSync(PAGES_DIR);
+
+// Old - when pages were like pages/index.pug
+
+// const PAGES = fs
+//   .readdirSync(PAGES_DIR)
+//   .filter(fileName => fileName.endsWith(".pug"));
 
 module.exports = {
   externals: {
@@ -166,8 +173,15 @@ module.exports = {
       https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
     */
     ...PAGES.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
+      template: `${PAGES_DIR}/${page}/${page}.pug`,
+      filename: `./${page}.html`
     }))
+
+    // Old - when pages were like pages/index.pug
+
+    // ...PAGES.map(page => new HtmlWebpackPlugin({
+    //   template: `${PAGES_DIR}/${page}`,
+    //   filename: `./${page.replace(/\.pug/,'.html')}`
+    // }))
   ]
 };

@@ -1,4 +1,4 @@
-extends ../layout/main
+extends ../../layout/main
 
 block variables
   - var title = 'Colors & Type'
@@ -10,7 +10,7 @@ block variables
 block content
   section
     .container
-      include ../components/color-square/color-square
+      include ../../components/color-square/color-square
       +color-square('Dark Shade 100%','#1F2041','dark-color')
       +color-square('Dark Shade 75%','#1F2041','dark-75-color')
       +color-square('Dark Shade 50%','#1F2041','dark-50-color')
