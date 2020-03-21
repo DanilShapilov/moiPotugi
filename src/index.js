@@ -1,5 +1,5 @@
 // JS
-import './js/'
+// import './js/'
 
 
 // D:\tuts\task2\moiPotugi\node_modules\jquery\dist
@@ -8,7 +8,7 @@ import './js/'
 import './assets/scss/main.scss'
 
 // inport BEM JS
-import './pug/includes/**/*.js'
+import './pug/components/**/*.js'
 
 // CSS (example)
 // import './assets/css/main.css'
