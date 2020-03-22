@@ -1,8 +1,9 @@
 // JS
 // import './js/'
 
-
-// D:\tuts\task2\moiPotugi\node_modules\jquery\dist
+// air-datepicker
+import 'air-datepicker/dist/js/datepicker.js';
+import 'air-datepicker/dist/css/datepicker.css';
 
 // SCSS
 import './assets/scss/main.scss'
