@@ -8,9 +8,9 @@ block variables
 //-   include ../components/header/header
 
 block content
-  section
-    .container
-      include ../../components/color-square/color-square
+  .container.colors-type-container
+    include ../../components/color-square/color-square
+    .color-square-container
       +color-square('Dark Shade 100%','#1F2041','dark-color')
       +color-square('Dark Shade 75%','#1F2041','dark-75-color')
       +color-square('Dark Shade 50%','#1F2041','dark-50-color')
@@ -18,5 +18,10 @@ block content
       +color-square('Dark Shade 5%','#1F2041','dark-5-color')
       +color-square('Purple','#BC9CFF','primary-color')
       +color-square('Green','#6FCF97','secondary-color')
-      
-      
+    
+    .heading-type-container
+      //- tag,tagName,elClass,string
+      +heading-type('h1', 'H1','h1-ref' ,'This one is the sub-section or widget title')
+      +heading-type('h2', 'H2','h2-ref' ,'Next one is the item title inside widgets')
+      +heading-type('h3', 'H3','h3-ref' ,'This is a label or CTA text')
+      +heading-type('p', 'Body','' ,'This is the body text which is used for most of the design, like paragraphs, lists, etc.')
