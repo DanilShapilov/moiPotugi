@@ -1,6 +1,5 @@
 .color-square{
   display: flex;
-  margin-bottom: 20px;
 }
 
 .color-square .color-square_square{
@@ -46,7 +45,8 @@
 .heading-type{
   width: 403px;
   display: flex;
-
+}
+.heading-type.heading-type--mb-50{
   margin-bottom: 50px;
 }
 .heading-type .heading-type_type{

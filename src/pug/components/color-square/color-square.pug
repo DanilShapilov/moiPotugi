@@ -1,7 +1,7 @@
 include ../text/text
 
 mixin color-square(colorName,colorHex,colorProvided)
-  .color-square
+  .color-square&attributes(attributes)
     div(class=`color-square_square color-square_square--${colorProvided}`)
 
     .color-square_text-wrapper.color-square_text.h2-ref
@@ -9,6 +9,6 @@ mixin color-square(colorName,colorHex,colorProvided)
       +text('h2',colorHex).color-square_text--weight-regular
 
 mixin heading-type(tag,tagName,elClass,string)
-  .heading-type
+  .heading-type&attributes(attributes)
     +text(tag,tagName)(class=`${elClass}`).heading-type_type
     +text(tag,string)(class=`${elClass}`)
