@@ -9,6 +9,8 @@ block variables
 
 block content
   .container.colors-type-container
+    include ../../components/logo/logo
+    +logo('grey')
     include ../../components/color-square/color-square
     .color-square-container
       +color-square('Dark Shade 100%','#1F2041','dark-color')
