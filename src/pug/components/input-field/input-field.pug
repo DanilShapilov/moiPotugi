@@ -1,0 +1,30 @@
+include ../text/text
+
+mixin input-field(props)
+  .input-field
+    .input-field_text-wrapper
+      +text('h3', props.heading).h3-ref
+      +text('h3', props.status).h3-ref.input-field--status
+    .input-field_input-wrapper
+      input.input-field_input(
+        type=props.type, 
+        value=props.value, 
+        placeholder=props.placeholder,
+        readonly=props.readonly
+        class=props.class)
+      if props.isDropdown
+        .input-field_dropdown-arrow
+          img(src="/assets/img/expand_more.svg", alt="", srcset="").dropdown-img
+      
+
+//- 
+  heading: 'text field', 
+  status: 'default', 
+  type: 'text', 
+  placeholder: 'Email'
+
+//- mixin input-field-dropdown()
+
+//- mixin input-field-masked()
+
+//- mixin input-field-subscription()

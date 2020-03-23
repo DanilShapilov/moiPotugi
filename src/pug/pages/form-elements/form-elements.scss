@@ -1,0 +1,11 @@
+.form-elements-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.form-elements-container{
+  width: 320px;
+}
+
+.form-elements-wrapper .form-elements-container .input-field:not(:last-child){
+  margin-bottom: 20px;
+}

@@ -8,3 +8,24 @@ block content
   .container
     include ../../components/logo/logo
     +logo('grey')
+    //- all form elements included in layout/main.pug
+    .form-elements-wrapper
+      .form-elements-container
+        +input-field({heading: 'text field', 
+                      status: 'default', 
+                      type: 'text', 
+                      placeholder: 'Email'})
+        +input-field({heading: 'text field', 
+                      status: 'hover / focus', 
+                      type: 'text', 
+                      placeholder: 'Email', 
+                      value: 'This is pretty awesome',
+                      class: 'focused'})
+        +input-field({heading: 'dropdown',
+                      isDropdown: true, 
+                      status: 'default', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown',
+                      readonly: 'readonly'})
