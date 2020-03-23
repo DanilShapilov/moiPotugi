@@ -21,11 +21,15 @@ block content
                       placeholder: 'Email', 
                       value: 'This is pretty awesome',
                       class: 'focused'})
-        +input-field({heading: 'dropdown',
-                      isDropdown: true, 
+        +input-field({heading: 'dropdown', 
                       status: 'default', 
                       type: 'text', 
                       placeholder: 'Сколько гостей', 
                       value: 'Сколько гостей',
                       class: 'dropdown',
-                      readonly: 'readonly'})
+                      isDropdown: true,
+                      readonly: 'readonly',
+                      dropdownData: [
+                      {key: 'взрослые',value: '0'},
+                      {key: 'дети',value: '0'},
+                      {key: 'младенцы',value: '0'}]})

@@ -15,7 +15,14 @@ mixin input-field(props)
       if props.isDropdown
         .input-field_dropdown-arrow
           img(src="/assets/img/expand_more.svg", alt="", srcset="").dropdown-img
-      
+        .input-field_dropdown-block-wrapper
+          each val in props.dropdownData
+            .input-field_dropdown-block
+              +text('h3',val.key).h3-ref
+              .input-field_dropdown-amount
+                button.input-field_dropdown-block-btn -
+                +text('h3',val.value).h3-ref.input-field_dropdown-amount-text
+                button.input-field_dropdown-block-btn +      
 
 //- 
   heading: 'text field', 
