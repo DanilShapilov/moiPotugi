@@ -10,7 +10,7 @@ mixin input-field(props)
         type=props.type, 
         value=props.value, 
         placeholder=props.placeholder,
-        readonly=props.readonly
+        readonly=props.readonly,
         class=props.class)
       if props.isDropdown
         .input-field_dropdown-arrow
@@ -20,9 +20,9 @@ mixin input-field(props)
             .input-field_dropdown-block
               +text('h3',val.key).h3-ref
               .input-field_dropdown-amount
-                button.input-field_dropdown-block-btn -
+                button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--minus -
                 +text('h3',val.value).h3-ref.input-field_dropdown-amount-text
-                button.input-field_dropdown-block-btn +      
+                button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--plus +      
 
 //- 
   heading: 'text field', 

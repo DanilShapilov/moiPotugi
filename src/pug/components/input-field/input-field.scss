@@ -23,6 +23,7 @@
   transition-duration: .25s;
   transition-timing-function: ease-in-out;
   cursor: pointer;
+  background-color: #fff;
 }
 .input-field .input-field_input::placeholder{
   color: $dark-25-color;
@@ -70,6 +71,9 @@
   width: 100%;
   border: 1px solid $dark-75-color;
   border-top: 0;
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
 }
 .input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block{
   display: flex;
@@ -98,4 +102,21 @@
 .input-field_dropdown-amount .input-field_dropdown-block-btn:disabled{
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+// for js styling
+.input-field .input-field_dropdown-block-wrapper{
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+}
+// change border radius for input when its focused
+.input-field .input-field_input.dropdown.focused{
+  border-radius: 4px 4px 0px 0px;
+}
+// show dropdown options when input get .focused class
+.input-field .input-field_input.focused ~ .input-field_dropdown-block-wrapper{
+  visibility: visible;
+  opacity: 1;
 }
