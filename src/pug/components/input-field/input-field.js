@@ -3,7 +3,8 @@ let allDropdownEl = document.querySelectorAll('.input-field_input.dropdown')
 allDropdownEl.forEach(el => {
   let dropdownInput = el;
   let dropdownArrow = el.nextElementSibling;
-  let dropdownOptions = dropdownArrow.nextElementSibling;
+  let dropdownOptions = dropdownArrow.nextElementSibling; // .input-field_dropdown-block-wrapper
+  
   
   function handleDropdownClick(element){
     element.addEventListener("click", () =>{
@@ -47,12 +48,32 @@ const dropdownInputText = dropdownInput.value;
       }
       // make minus btn disabled of not depends on dropdownOptionValue
       checkValueForZero(dropdownOptionValue, btn);
-      // changeDropdownInputValue(btn);
+      changeDropdownInputValue(btn);
     })
   }
 
   function changeDropdownInputValue(btn) {
-    let dropdownOptionValue = btn.parentElement.querySelector('.input-field_dropdown-amount-text');
-    
+    let whatToDoWithValues = dropdownOptions.getAttribute('whattodowithvalues');
+     
+    if (whatToDoWithValues === 'count') {
+      let counted = 0;
+      dropdownOptions.querySelectorAll('.input-field_dropdown-amount-text').forEach((value) => {
+        counted += +value.innerHTML;
+      })
+      if (counted === 0) {
+        dropdownInput.value = dropdownInputText;
+      }else{
+        dropdownInput.value = counted + ' Гостя';
+      }
+    }
+
+    if (whatToDoWithValues === 'toString') {
+      dropdownInput.value = '';
+      dropdownOptions.querySelectorAll('.input-field_dropdown-block').forEach((optionEl) => {
+        let optionHeading = optionEl.querySelector('h3').innerHTML;
+        let optionValue = +optionEl.querySelector('.input-field_dropdown-amount-text').innerHTML;
+        dropdownInput.value += optionValue + ' '+ optionHeading + ', ';
+      })
+    }
   }
 })

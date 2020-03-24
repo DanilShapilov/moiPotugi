@@ -15,7 +15,7 @@ mixin input-field(props)
       if props.isDropdown
         .input-field_dropdown-arrow
           img(src="/assets/img/expand_more.svg", alt="", srcset="").dropdown-img
-        .input-field_dropdown-block-wrapper
+        .input-field_dropdown-block-wrapper(whatToDoWithValues=props.whatToDoWithValues)
           each val in props.dropdownData
             .input-field_dropdown-block
               +text('h3',val.key).h3-ref
