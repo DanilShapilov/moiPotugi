@@ -58,6 +58,24 @@
   transition-timing-function: ease-in-out;
   padding: 15px;
 }
+
+.input-field .input-field_subscription-arrow{
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.input-field .input-field_subscription-arrow .subscription-img{
+  width: 100%;
+  height: 100%;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  padding: 13px;
+}
+
 // when dropdown .input-field_input-wrapper hovered/focused change opacity of dropdown-img
 .input-field .input-field_input-wrapper .input-field_input.focused  + .input-field_dropdown-arrow .dropdown-img,
 .input-field .input-field_input-wrapper:hover .input-field_dropdown-arrow .dropdown-img,
@@ -69,7 +87,7 @@
 
 .input-field .input-field_dropdown-block-wrapper{
   width: 100%;
-  border: 1px solid $dark-75-color;
+  border: 1px solid $dark-50-color;
   border-top: 0;
   position: absolute;
   z-index: 99;

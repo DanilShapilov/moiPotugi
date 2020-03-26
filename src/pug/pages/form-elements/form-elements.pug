@@ -34,16 +34,46 @@ block content
                       {key: 'взрослые',value: '0'},
                       {key: 'дети',value: '0'},
                       {key: 'младенцы',value: '0'}]})
-        +input-field({heading: 'dropdown', 
+        +input-field({heading: 'masked text field', 
+                      status: 'default', 
+                      type: 'text',
+                      pattern: 'dd.MM.yyyy', 
+                      placeholder: 'ДД.ММ.ГГГГ', 
+                      value: '',
+                      class: ''})
+        .form-elements-short-container
+          +input-field-subscription({heading: 'subscription text field', 
+                                    status: '', 
+                                    type: 'email', 
+                                    placeholder: 'Email', 
+                                    value: '',
+                                    class: ''})
+
+        br
+        .form-elements-short-container
+          +input-field({heading: 'dropdown', 
+                        status: 'default', 
+                        type: 'text', 
+                        placeholder: 'Комнаты', 
+                        value: 'Комнаты',
+                        class: 'dropdown',
+                        isDropdown: true,
+                        readonly: 'readonly',
+                        whatToDoWithValues: 'toString',
+                        dropdownData: [
+                        {key: 'спальни',value: '2'},
+                        {key: 'кровати',value: '2'},
+                        {key: 'ванные комнаты',value: '0'}]})
+          +input-field({heading: 'dropdown', 
                       status: 'default', 
                       type: 'text', 
                       placeholder: 'Комнаты', 
                       value: 'Комнаты',
-                      class: 'dropdown',
+                      class: 'dropdown focused',
                       isDropdown: true,
                       readonly: 'readonly',
                       whatToDoWithValues: 'toString',
                       dropdownData: [
                       {key: 'спальни',value: '2'},
-                      {key: 'кровати',value: '0'},
-                      {key: 'ванные комнаты',value: '1'}]})
+                      {key: 'кровати',value: '2'},
+                      {key: 'ванные комнаты',value: '0'}]})

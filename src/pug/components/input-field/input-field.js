@@ -16,8 +16,11 @@ allDropdownEl.forEach(el => {
 
   // + and - btns
   // find all buttons and handle click
+  const dropdownInputText = dropdownInput.value;
   dropdownOptions.querySelectorAll('.input-field_dropdown-block-btn').forEach((btn) => {
     handleOptionClick(btn);
+    // change value inside dropdown input
+    changeDropdownInputValue(btn);
     // make minus btn disabled if option value is 0
     let dropdownOptionValue = +btn.parentElement.querySelector('.input-field_dropdown-amount-text').innerHTML;
     
@@ -35,7 +38,7 @@ allDropdownEl.forEach(el => {
     }
   }
 
-const dropdownInputText = dropdownInput.value;
+
 
   function handleOptionClick(btn) {
     let dropdownOptionValue = btn.parentElement.querySelector('.input-field_dropdown-amount-text');
