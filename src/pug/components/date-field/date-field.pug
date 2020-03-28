@@ -1,0 +1,52 @@
+include ../text/text
+
+mixin input-field(props)
+  .input-field
+    .input-field_text-wrapper
+      +text('h3', props.heading).h3-ref
+      +text('h3', props.status).h3-ref.input-field--status
+    .input-field_input-wrapper
+      input.input-field_input(
+        type=props.type, 
+        value=props.value, 
+        placeholder=props.placeholder,
+        readonly=props.readonly,
+        class=props.class,
+        pattern=props.pattern)
+      if props.isDropdown
+        .input-field_dropdown-arrow
+          img(src="/assets/img/expand_more.svg", alt="", srcset="").dropdown-img
+        .input-field_dropdown-block-wrapper(whatToDoWithValues=props.whatToDoWithValues)
+          each val in props.dropdownData
+            .input-field_dropdown-block
+              +text('h3',val.key).h3-ref
+              .input-field_dropdown-amount
+                button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--minus -
+                +text('h3',val.value).h3-ref.input-field_dropdown-amount-text
+                button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--plus +      
+
+mixin input-field-subscription(props)
+  .input-field
+    .input-field_text-wrapper
+      +text('h3', props.heading).h3-ref
+      +text('h3', props.status).h3-ref.input-field--status
+    .input-field_input-wrapper
+      input.input-field_input(
+        type=props.type, 
+        value=props.value, 
+        placeholder=props.placeholder,
+        class=props.class)
+      .input-field_subscription-arrow
+        img(src="/assets/img/arrow_forward.svg", alt="", srcset="").subscription-img
+
+//- 
+  heading: 'text field', 
+  status: 'default', 
+  type: 'text', 
+  placeholder: 'Email'
+
+//- mixin input-field-dropdown()
+
+//- mixin input-field-masked()
+
+//- 

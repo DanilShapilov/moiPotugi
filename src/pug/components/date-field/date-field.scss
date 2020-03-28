@@ -1,0 +1,140 @@
+.input-field{
+  width: 100%;
+}
+.input-field .input-field_text-wrapper .input-field--status{
+  font-family: 'Conv_Montserrat-Regular'; 
+  font-weight: normal;
+  color: $dark-50-color;
+}
+
+.input-field .input-field_text-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.input-field .input-field_input{
+  width: 100%;
+  height: 44px;
+  border: 1px solid $dark-25-color;
+  border-radius: 4px;
+  padding: 0 15px 0 15px;
+  color: $dark-75-color;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: #fff;
+}
+.input-field .input-field_input::placeholder{
+  color: $dark-25-color;
+}
+.input-field .input-field_input.focused,
+.input-field .input-field_input-wrapper:hover .input-field_input,
+.input-field .input-field_input-wrapper .input-field_input:focus{
+  border-color: $dark-50-color;
+}
+.input-field .input-field_input.dropdown{
+  text-overflow: ellipsis;
+  padding-right: 60px;
+}
+
+.input-field .input-field_input-wrapper{
+  position: relative;
+}
+.input-field .input-field_dropdown-arrow{
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.input-field .input-field_dropdown-arrow .dropdown-img{
+  width: 100%;
+  height: 100%;
+  opacity: .5;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  padding: 15px;
+}
+
+.input-field .input-field_subscription-arrow{
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.input-field .input-field_subscription-arrow .subscription-img{
+  width: 100%;
+  height: 100%;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  padding: 13px;
+}
+
+// when dropdown .input-field_input-wrapper hovered/focused change opacity of dropdown-img
+.input-field .input-field_input-wrapper .input-field_input.focused  + .input-field_dropdown-arrow .dropdown-img,
+.input-field .input-field_input-wrapper:hover .input-field_dropdown-arrow .dropdown-img,
+.input-field .input-field_input-wrapper .input-field_input:focus + .input-field_dropdown-arrow .dropdown-img{
+  width: 100%;
+  height: 100%;
+  opacity: .75;
+}
+
+.input-field .input-field_dropdown-block-wrapper{
+  width: 100%;
+  border: 1px solid $dark-50-color;
+  border-top: 0;
+  position: absolute;
+  z-index: 99;
+  background-color: #fff;
+}
+.input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block{
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px 0 15px;
+}
+
+.input-field_dropdown-amount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 92px;
+}
+.input-field_dropdown-amount .input-field_dropdown-block-btn{
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $dark-25-color;
+  color: $dark-50-color;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+}
+.input-field_dropdown-amount .input-field_dropdown-block-btn:disabled{
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+// for js styling
+.input-field .input-field_dropdown-block-wrapper{
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+}
+// change border radius for input when its focused
+.input-field .input-field_input.dropdown.focused{
+  border-radius: 4px 4px 0px 0px;
+}
+// show dropdown options when input get .focused class
+.input-field .input-field_input.focused ~ .input-field_dropdown-block-wrapper{
+  visibility: visible;
+  opacity: 1;
+}
