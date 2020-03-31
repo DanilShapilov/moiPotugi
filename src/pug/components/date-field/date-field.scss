@@ -1,19 +1,19 @@
-.input-field{
+.date-field{
   width: 100%;
 }
-.input-field .input-field_text-wrapper .input-field--status{
+.date-field .date-field_text-wrapper .date-field--status{
   font-family: 'Conv_Montserrat-Regular'; 
   font-weight: normal;
   color: $dark-50-color;
 }
 
-.input-field .input-field_text-wrapper{
+.date-field .date-field_text-wrapper{
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
 
-.input-field .input-field_input{
+.date-field .date-field_input{
   width: 100%;
   height: 44px;
   border: 1px solid $dark-25-color;
@@ -25,32 +25,33 @@
   cursor: pointer;
   background-color: #fff;
 }
-.input-field .input-field_input::placeholder{
+.date-field .date-field_input::placeholder{
   color: $dark-25-color;
 }
-.input-field .input-field_input.focused,
-.input-field .input-field_input-wrapper:hover .input-field_input,
-.input-field .input-field_input-wrapper .input-field_input:focus{
+.date-field .date-field_input.focused,
+.date-field .date-field_input-wrapper:hover .date-field_input,
+.date-field .date-field_input-wrapper .date-field_input:focus{
   border-color: $dark-50-color;
 }
-.input-field .input-field_input.dropdown{
-  text-overflow: ellipsis;
-  padding-right: 60px;
+.date-field .date-field_input.dropdown{
+  // text-overflow: ellipsis;
+  // padding-right: 60px;
 }
 
-.input-field .input-field_input-wrapper{
+.date-field .date-field_input-wrapper{
   position: relative;
 }
-.input-field .input-field_dropdown-arrow{
+.date-field .date-field_dropdown-arrow{
   width: 44px;
   height: 44px;
   position: absolute;
   top: 0;
   right: 0;
   cursor: pointer;
+  pointer-events: none;
 }
 
-.input-field .input-field_dropdown-arrow .dropdown-img{
+.date-field .date-field_dropdown-arrow .dropdown-img{
   width: 100%;
   height: 100%;
   opacity: .5;
@@ -59,82 +60,131 @@
   padding: 15px;
 }
 
-.input-field .input-field_subscription-arrow{
-  width: 44px;
-  height: 44px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
 
-.input-field .input-field_subscription-arrow .subscription-img{
-  width: 100%;
-  height: 100%;
-  transition-duration: .25s;
-  transition-timing-function: ease-in-out;
-  padding: 13px;
-}
-
-// when dropdown .input-field_input-wrapper hovered/focused change opacity of dropdown-img
-.input-field .input-field_input-wrapper .input-field_input.focused  + .input-field_dropdown-arrow .dropdown-img,
-.input-field .input-field_input-wrapper:hover .input-field_dropdown-arrow .dropdown-img,
-.input-field .input-field_input-wrapper .input-field_input:focus + .input-field_dropdown-arrow .dropdown-img{
+// when dropdown .date-field_input-wrapper hovered/focused change opacity of dropdown-img
+.date-field .date-field_input-wrapper .date-field_input.focused  + .date-field_dropdown-arrow .dropdown-img,
+.date-field .date-field_input-wrapper:hover .date-field_dropdown-arrow .dropdown-img,
+.date-field .date-field_input-wrapper .date-field_input:focus + .date-field_dropdown-arrow .dropdown-img{
   width: 100%;
   height: 100%;
   opacity: .75;
 }
 
-.input-field .input-field_dropdown-block-wrapper{
-  width: 100%;
-  border: 1px solid $dark-50-color;
-  border-top: 0;
-  position: absolute;
-  z-index: 99;
-  background-color: #fff;
-}
-.input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block{
-  display: flex;
-  height: 40px;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 7px 0 15px;
-}
-
-.input-field_dropdown-amount{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 92px;
-}
-.input-field_dropdown-amount .input-field_dropdown-block-btn{
-  background-color: #fff;
-  width: 30px;
-  height: 30px;
+// calendar styling
+.custom.datepicker{
+  box-sizing: border-box;
   border: 1px solid $dark-25-color;
+  width: 320px;
+  height: 369px;
   color: $dark-50-color;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-}
-.input-field_dropdown-amount .input-field_dropdown-block-btn:disabled{
-  opacity: 0.6;
-  cursor: not-allowed;
+  font-family: "Conv_Montserrat-Regular";
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 11px 12px 0;
+
+  .datepicker--cells{
+    justify-content: center ;
+    .datepicker--cell{
+      border-radius: 50%;
+
+// when single .custom.datepicker .datepicker--cells .datepicker--cell.-selected-
+// range between  .datepicker--cell datepicker--cell-day -in-range-
+// when range     .datepicker--cell datepicker--cell-day -range-from- -selected-
+//                .datepicker--cell datepicker--cell-day -range-to- -selected-
+
+      position: relative;
+      &.-selected-{
+        background-image: $secondary-linear-gradient;
+        &.-range-from-{
+          background-image: $primary-linear-gradient;
+          &::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: $primary-linear-gradient;
+            opacity: .25;
+            z-index: -1;
+            border-radius: 50% 0 0 50%;
+          }
+        }
+        &.-range-to-{
+          background-image: $primary-linear-gradient;
+          &::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: $primary-linear-gradient;
+            opacity: .25;
+            z-index: -1;
+            border-radius: 0 50% 50% 0;
+          }
+        }
+      }
+      
+      &.-in-range-{
+        // background-image: $primary-linear-gradient;
+        background: none;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          background-image: $primary-linear-gradient;
+          opacity: .25;
+          z-index: -1;
+        }
+        border-radius: 0;
+        color: $dark-50-color;
+      }
+    }
+  }
 }
 
-// for js styling
-.input-field .input-field_dropdown-block-wrapper{
-  visibility: hidden;
-  opacity: 0;
-  transition-duration: .25s;
-  transition-timing-function: ease-in-out;
+.custom.datepicker .datepicker--nav{
+  border-bottom: none;
 }
-// change border radius for input when its focused
-.input-field .input-field_input.dropdown.focused{
-  border-radius: 4px 4px 0px 0px;
+
+.custom.datepicker .datepicker--nav-title,
+.custom.datepicker .datepicker--nav-title i{
+  @extend .h2-ref;
 }
-// show dropdown options when input get .focused class
-.input-field .input-field_input.focused ~ .input-field_dropdown-block-wrapper{
-  visibility: visible;
-  opacity: 1;
+
+.custom.datepicker .datepicker--nav-action svg{
+  display: none;
+}
+
+.custom.datepicker .datepicker--nav-action[data-action]:before{
+  content: '';
+  width: 32px;
+  height: 32px;
+  background-image: url(/assets/img/arrow_forward.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.custom.datepicker .datepicker--nav-action[data-action='prev']:before{
+  transform: rotate(180deg)
+}
+
+.custom.datepicker .datepicker--days-names{
+  display: flex;
+  justify-content: space-around;
+  padding: 23px 3px 8px;
+  .datepicker--day-name{
+    font-family: 'Conv_Montserrat-Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $primary-color;
+    text-transform: capitalize;
+  }
+}
+
+
+.datepicker--cell-day{
+  width: 40px;
+  height: 40px;
 }

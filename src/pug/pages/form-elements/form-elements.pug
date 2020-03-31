@@ -41,6 +41,15 @@ block content
                       placeholder: 'ДД.ММ.ГГГГ', 
                       value: '',
                       class: ''})
+        +date-field({heading: 'date Dropdown', 
+                      status: '', 
+                      type: 'text',
+                      pattern: 'dd.MM.yyyy', 
+                      placeholder: 'ДД.ММ.ГГГГ', 
+                      value: '',
+                      isDropdown: true,
+                      class: 'date dropdown'})
+
         .form-elements-short-container
           +input-field-subscription({heading: 'subscription text field', 
                                     status: '', 

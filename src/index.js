@@ -10,6 +10,9 @@ import './assets/scss/main.scss'
 
 // inport BEM JS
 import './pug/components/**/*.js'
+import './pug/pages/**/*.js'
+// old
+// import './pug/components/**/*.js'
 
 // CSS (example)
 // import './assets/css/main.css'
