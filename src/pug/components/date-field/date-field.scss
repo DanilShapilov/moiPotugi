@@ -122,6 +122,18 @@
             border-radius: 0 50% 50% 0;
           }
         }
+        &.-range-from-.-range-to-{
+          &::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-image: $primary-linear-gradient;
+            opacity: .25;
+            z-index: -1;
+            border-radius: 50%;
+          }
+        }
       }
       
       &.-in-range-{
