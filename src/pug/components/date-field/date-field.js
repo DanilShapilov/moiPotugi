@@ -4,7 +4,7 @@ let datePicker = $('.date').datepicker({
   toggleSelected: false,
   multipleDatesSeparator: ' - ',
   classes: 'custom',
-  inline: true
+  // inline: true
 }).data('datepicker');
 
 

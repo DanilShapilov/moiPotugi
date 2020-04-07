@@ -10,7 +10,7 @@ import './assets/scss/main.scss'
 
 // inport BEM JS
 import './pug/components/**/*.js'
-import './pug/pages/**/*.js'
+// import './pug/pages/**/*.js'
 // old
 // import './pug/components/**/*.js'
 
