@@ -41,16 +41,33 @@ block content
                       placeholder: 'ДД.ММ.ГГГГ', 
                       value: '',
                       class: ''})
-        +date-field({heading: 'date Dropdown', 
-                      status: '', 
-                      type: 'text',
-                      pattern: 'dd.MM.yyyy', 
-                      placeholder: 'ДД.ММ.ГГГГ', 
-                      value: '',
-                      isDropdown: true,
-                      class: 'date dropdown'})
+        .date-fields-on-one-row
+          +date-field({heading: 'date dropdown', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date dropdown'})
+          +date-field({heading: 'date dropdown', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date dropdown'})
 
         .form-elements-short-container
+          +date-field({heading: 'filter date dropdown', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date dropdown'})
           +input-field-subscription({heading: 'subscription text field', 
                                     status: '', 
                                     type: 'email', 
@@ -86,3 +103,23 @@ block content
                       {key: 'спальни',value: '2'},
                       {key: 'кровати',value: '2'},
                       {key: 'ванные комнаты',value: '0'}]})
+      
+      .form-elements-container
+        .h3-ref Checkbox Buttons
+        // id name headingText paragraphText
+        .form-elements-short-container
+          +checkbox({ id: 'inputId1', 
+                      name: 'inputName',
+                      headingText: 'Можно курить',
+                      paragraphText: '',
+                      isChecked: false})
+          +checkbox({ id: 'inputId2', 
+                      name: 'inputName',
+                      headingText: 'Можно с питомцами',
+                      paragraphText: '',
+                      isChecked: true})
+          +checkbox({ id: 'inputId3', 
+                      name: 'inputName',
+                      headingText: 'Можно пригласить гостей (до 10 человек)',
+                      paragraphText: '',
+                      isChecked: true})

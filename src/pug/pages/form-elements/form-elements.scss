@@ -1,14 +1,29 @@
 .form-elements-wrapper{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .form-elements-container{
   width: 320px;
+  .input-field,
+  .date-field{
+    margin-bottom: 20px;
+  }
+  .checkbox{
+    margin: 10px 0;
+  }
+
+  .date-fields-on-one-row{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .date-field{
+      flex-basis: 150px;
+    }
+  }
 }
 .form-elements-short-container{
   width: 266px;
 }
 
-.form-elements-wrapper .form-elements-container .input-field:not(:last-child){
-  margin-bottom: 20px;
-}
+

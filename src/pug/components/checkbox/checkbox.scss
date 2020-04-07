@@ -1,0 +1,37 @@
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  input{
+    // visibility: hidden;
+    display: none;
+  }
+  .checkbox-custom{
+    width: 20px;
+    height: 20px;
+    border: 1px solid $dark-25-color;
+    flex-shrink: 0;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  input:checked + .checkbox-custom{
+    border: 1px solid $primary-color;
+    background-image: url(/assets/img/check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+
+
+
+
+
+
+  .checkbox-text{
+    display: flex;
+    line-height: 18px;
+    color: $dark-50-color;
+  }
+}
