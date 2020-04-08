@@ -1,0 +1,16 @@
+include ../text/text
+
+// id name headingText paragraphText
+mixin radio(props)
+  -var elId = props.id;
+  -var elName = props.name;
+  -var elHeadingText = props.headingText;
+  -var elParagraphText = props.paragraphText;
+  -var elIsChecked = props.isChecked;
+
+
+  label(for=elId).radio
+    input(type="radio", name=elName, id=elId, checked=elIsChecked)
+    .radio-custom
+    .radio-text
+      span #{elHeadingText}

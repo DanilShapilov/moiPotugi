@@ -108,18 +108,32 @@ block content
         .h3-ref Checkbox Buttons
         // id name headingText paragraphText
         .form-elements-short-container
-          +checkbox({ id: 'inputId1', 
+          +checkbox({ id: 'checkboxId1', 
                       name: 'inputName',
                       headingText: 'Можно курить',
                       paragraphText: '',
                       isChecked: false})
-          +checkbox({ id: 'inputId2', 
+          +checkbox({ id: 'checkboxId2', 
                       name: 'inputName',
                       headingText: 'Можно с питомцами',
                       paragraphText: '',
                       isChecked: true})
-          +checkbox({ id: 'inputId3', 
+          +checkbox({ id: 'checkboxId3', 
                       name: 'inputName',
                       headingText: 'Можно пригласить гостей (до 10 человек)',
                       paragraphText: '',
                       isChecked: true})
+
+        .h3-ref radio Buttons
+        // id name headingText paragraphText
+        .form-elements-short-container.radio-container
+          +radio({id: 'radioId1', 
+                  name: 'inputName',
+                  headingText: 'Женщина',
+                  paragraphText: '',
+                  isChecked: true})
+          +radio({id: 'radioId2', 
+                  name: 'inputName',
+                  headingText: 'Мужчина',
+                  paragraphText: '',
+                  isChecked: false})

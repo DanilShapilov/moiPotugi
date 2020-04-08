@@ -8,7 +8,8 @@
   .date-field{
     margin-bottom: 20px;
   }
-  .checkbox{
+  .checkbox,
+  .radio{
     margin: 10px 0;
   }
 
@@ -24,6 +25,14 @@
 }
 .form-elements-short-container{
   width: 266px;
+  &.radio-container{
+    display: flex;
+    flex-direction: row;
+
+    .radio:not(:last-child){
+      margin-right: 20px;
+    }
+  }
 }
 
 
