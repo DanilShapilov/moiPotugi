@@ -151,3 +151,13 @@ block content
                   headingText: 'Получать спецпредложения',
                   paragraphText: '',
                   isChecked: false})
+        
+        .h3-ref like button
+        // id name headingText paragraphText
+        .form-elements-short-container
+          +like({id: 'likeId1', 
+                  name: 'inputName',
+                  isChecked: true})
+          +like({id: 'likeId2', 
+                  name: 'inputName',
+                  isChecked: false})
