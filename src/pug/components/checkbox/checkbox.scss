@@ -1,6 +1,8 @@
 .checkbox{
   display: flex;
   flex-direction: row;
+  user-select: none;
+  cursor: pointer;
   input{
     // visibility: hidden;
     display: none;
@@ -33,5 +35,6 @@
     display: flex;
     line-height: 18px;
     color: $dark-50-color;
+    
   }
 }
