@@ -154,10 +154,12 @@ block content
         
         .h3-ref like button
         // id name headingText paragraphText
-        .form-elements-short-container
+        .form-elements-short-container.like-container
           +like({id: 'likeId1', 
                   name: 'inputName',
-                  isChecked: true})
+                  likesTotal: 2,
+                  isChecked: false})
           +like({id: 'likeId2', 
                   name: 'inputName',
-                  isChecked: false})
+                  likesTotal: 12,
+                  isChecked: true})

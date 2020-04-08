@@ -1,57 +1,40 @@
 .like{
   display: flex;
   flex-direction: row;
-  user-select: none;
+  align-items: center;
+  align-content: space-between;
+  flex-basis: 40px;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
   cursor: pointer;
-  input{
-    // visibility: hidden;
-    display: none;
-  }
-  .like-custom{
-    width: 40px;
-    height: 20px;
-    border: 1px solid $dark-25-color;
+  
+  svg{
     flex-shrink: 0;
-    border-radius: 10px;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    &::after{
-      display: block;
-      content: '';
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: $dark-25-color;
-      margin: 0 4px;
-    }
   }
 
-  input:checked + .like-custom{
+  background-color: #fff;
+  border: 1px solid $dark-25-color;
+
+  .amout-of-likes{
+    color: $dark-25-color;
+    font-family: 'Conv_Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    width: 16px;
+  }
+
+  &.liked{
     border: 1px solid $primary-color;
-    justify-content: flex-end;
-    &::after{
-      display: block;
-      content: '';
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: $primary-linear-gradient;
+    .amout-of-likes{
+      color: $primary-color;
     }
-  }
-
-
-
-
-
-
-
-
-
-  .like-text{
-    display: flex;
-    line-height: 18px;
-    color: $dark-50-color;
-    
+    svg path{
+      fill: $primary-color;
+      fill-opacity: 1;
+      d: path("M4.93026 7.88672L4.3248 7.33984C3.63469 6.71484 3.13339 6.2526 2.82089 5.95312C2.50839 5.65365 2.15683 5.28255 1.7662 4.83984C1.3886 4.39714 1.12818 4 0.984952 3.64844C0.841723 3.28385 0.770108 2.91276 0.770108 2.53516C0.770108 1.89714 0.984952 1.35677 1.41464 0.914062C1.85735 0.471354 2.40422 0.25 3.05526 0.25C3.81047 0.25 4.43547 0.542969 4.93026 1.12891C5.42506 0.542969 6.05006 0.25 6.80526 0.25C7.45631 0.25 7.99667 0.471354 8.42636 0.914062C8.86907 1.35677 9.09042 1.89714 9.09042 2.53516C9.09042 3.04297 8.92115 3.57031 8.58261 4.11719C8.24407 4.66406 7.87297 5.13932 7.46933 5.54297C7.0787 5.94661 6.43417 6.55208 5.53573 7.35938L4.93026 7.88672Z");
+    }
   }
 }

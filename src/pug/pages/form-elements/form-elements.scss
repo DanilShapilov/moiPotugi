@@ -34,6 +34,15 @@
       margin-right: 20px;
     }
   }
+
+  &.like-container{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    .like{
+      margin-right: 10px;
+    }
+  }
 }
 
 
