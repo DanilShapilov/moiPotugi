@@ -137,3 +137,17 @@ block content
                   headingText: 'Мужчина',
                   paragraphText: '',
                   isChecked: false})
+        
+        .h3-ref toggle
+        // id name headingText paragraphText
+        .form-elements-short-container
+          +toggle({id: 'toggleId1', 
+                  name: 'inputName',
+                  headingText: 'Получать спецпредложения',
+                  paragraphText: '',
+                  isChecked: true})
+          +toggle({id: 'toggleId2', 
+                  name: 'inputName',
+                  headingText: 'Получать спецпредложения',
+                  paragraphText: '',
+                  isChecked: false})
