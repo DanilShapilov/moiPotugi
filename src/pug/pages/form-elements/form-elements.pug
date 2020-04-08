@@ -163,3 +163,9 @@ block content
                   name: 'inputName',
                   likesTotal: 12,
                   isChecked: true})
+
+        .h3-ref rate button
+        // starsAmount starsChoosed nameOfId
+        .form-elements-short-container.rate-container
+          +rate({starsAmount: 5, starsChoosed: 4, nameOfId: 'firstStars'})
+          +rate({starsAmount: 5, starsChoosed: 4})

@@ -38,9 +38,15 @@
   &.like-container{
     display: flex;
     flex-direction: row;
-    padding-top: 10px;
     .like{
-      margin-right: 10px;
+      margin: 10px 10px 10px 0;
+    }
+  }
+  &.rate-container{
+    display: flex;
+    flex-direction: row;
+    .stars{
+      margin: 10px 20px 0 0;
     }
   }
 }
