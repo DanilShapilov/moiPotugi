@@ -1,5 +1,4 @@
 let allLikeBtns = document.querySelectorAll('.like');
-console.log(allLikeBtns);
 
 allLikeBtns.forEach(btn => {
   btn.addEventListener('click', () => {

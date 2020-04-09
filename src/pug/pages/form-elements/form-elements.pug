@@ -168,4 +168,10 @@ block content
         // starsAmount starsChoosed nameOfId
         .form-elements-short-container.rate-container
           +rate({starsAmount: 5, starsChoosed: 4, nameOfId: 'firstStars'})
-          +rate({starsAmount: 5, starsChoosed: 4})
+          +rate({starsAmount: 5, starsChoosed: 5, nameOfId: 'secondStars'})
+
+      .form-elements-container
+        .h3-ref Range Slider
+        // id name headingText paragraphText
+        .form-elements-short-container
+          +range-slider()
