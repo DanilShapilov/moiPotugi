@@ -1,0 +1,7 @@
+//- type, text, isWide
+mixin buttons(props)
+  -var btnType = props.type;
+  -var btnText = props.text;
+  -var isWide = props.isWide;
+
+  button(type='button', class=`btn ${btnType} ${isWide === true ? 'btnWide' : ''}`)&attributes(attributes)=btnText

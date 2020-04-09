@@ -172,6 +172,39 @@ block content
 
       .form-elements-container
         .h3-ref Range Slider
-        // id name headingText paragraphText
+        // 
         .form-elements-short-container
           +range-slider()
+
+        .h3-ref buttons
+        // type, text, isWide
+        .form-elements-short-container.buttons-container
+          +buttons({type:'fill',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  )
+          +buttons({type:'fill',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  ).hovered
+          +buttons({type:'stroke',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  )
+          +buttons({type:'stroke',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  ).hovered
+          +buttons({type:'link',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  )
+          +buttons({type:'link',
+                    text: 'CLICK ME',
+                    isWide: false}
+                  ).hovered
+
+        +buttons({type:'fill',
+                  text: 'перейти к оплате',
+                  isWide: true}
+                )
