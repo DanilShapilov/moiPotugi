@@ -1,0 +1,34 @@
+.range-slider{
+  #range-slider_amount{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    color: $dark-50-color;
+    font-family: 'Conv_Montserrat-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase
+  }
+}
+#range-slider{
+  height: 6px;
+  border: 1px solid $dark-25-color;
+
+  .ui-slider-range{
+    background: $secondary-linear-gradient;
+    border: 0px;
+    height: 6px;
+    top: -1px;
+  }
+  .ui-slider-handle{
+    width: 16px;
+    height: 16px;
+    top: -6px;
+    border-radius: 50%;
+    background: $secondary-linear-gradient;
+    border: 2px solid #fff;
+  }
+}

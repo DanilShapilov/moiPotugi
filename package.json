@@ -32,7 +32,8 @@
   "dependencies": {
     "air-datepicker": "^2.2.3",
     "jquery": "^3.4.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "webpack-jquery-ui": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
