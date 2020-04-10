@@ -24,15 +24,16 @@ mixin input-field(props)
                 button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--minus -
                 +text('h3',val.value).h3-ref.input-field_dropdown-amount-text
                 button.input-field_dropdown-block-btn.input-field_dropdown-block-btn--plus +    
-          .input-field_dropdown-block-buttons
-            +buttons({type:'link',
-                    text: 'очистить',
-                    isWide: false}
-                  ).hovered
-            +buttons({type:'link',
-                      text: 'применить',
+          if props.addButtons
+            .input-field_dropdown-block-buttons
+              +buttons({type:'link',
+                      text: 'очистить',
                       isWide: false}
-                    )
+                    ).hovered
+              +buttons({type:'link',
+                        text: 'применить',
+                        isWide: false}
+                      )
 
 mixin input-field-subscription(props)
   .input-field
