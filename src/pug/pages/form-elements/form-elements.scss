@@ -1,8 +1,12 @@
 .form-elements-wrapper{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 90px;
+  padding-top: 143px;
 }
 .form-elements-container{
+  flex-shrink: 0;
   width: 320px;
   .input-field,
   .date-field{

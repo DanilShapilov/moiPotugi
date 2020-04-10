@@ -73,7 +73,7 @@ allDropdownEl.forEach(el => {
     if (whatToDoWithValues === 'toString') {
       dropdownInput.value = '';
       dropdownOptions.querySelectorAll('.input-field_dropdown-block').forEach((optionEl) => {
-        let optionHeading = optionEl.querySelector('h3').innerHTML;
+        let optionHeading = optionEl.querySelector('.optionHeading').innerHTML;
         let optionValue = +optionEl.querySelector('.input-field_dropdown-amount-text').innerHTML;
         dropdownInput.value += optionValue + ' '+ optionHeading + ', ';
       })

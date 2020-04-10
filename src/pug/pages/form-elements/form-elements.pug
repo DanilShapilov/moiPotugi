@@ -75,34 +75,8 @@ block content
                                     value: '',
                                     class: ''})
 
-        br
-        .form-elements-short-container
-          +input-field({heading: 'dropdown', 
-                        status: 'default', 
-                        type: 'text', 
-                        placeholder: 'Комнаты', 
-                        value: 'Комнаты',
-                        class: 'dropdown',
-                        isDropdown: true,
-                        readonly: 'readonly',
-                        whatToDoWithValues: 'toString',
-                        dropdownData: [
-                        {key: 'спальни',value: '2'},
-                        {key: 'кровати',value: '2'},
-                        {key: 'ванные комнаты',value: '0'}]})
-          +input-field({heading: 'dropdown', 
-                      status: 'default', 
-                      type: 'text', 
-                      placeholder: 'Комнаты', 
-                      value: 'Комнаты',
-                      class: 'dropdown focused',
-                      isDropdown: true,
-                      readonly: 'readonly',
-                      whatToDoWithValues: 'toString',
-                      dropdownData: [
-                      {key: 'спальни',value: '2'},
-                      {key: 'кровати',value: '2'},
-                      {key: 'ванные комнаты',value: '0'}]})
+        
+        
       
       .form-elements-container
         .h3-ref Checkbox Buttons
@@ -212,3 +186,65 @@ block content
         .h3-ref pagination
         // type, text, isWide
         .form-elements-short-container
+          +pagination()
+
+    .form-elements-wrapper
+      .form-elements-container
+        .form-elements-short-container
+          +input-field({heading: 'dropdown', 
+                        status: 'default', 
+                        type: 'text', 
+                        placeholder: 'Комнаты', 
+                        value: 'Комнаты',
+                        class: 'dropdown',
+                        isDropdown: true,
+                        readonly: 'readonly',
+                        whatToDoWithValues: 'toString',
+                        dropdownData: [
+                        {key: 'спальни',value: '2'},
+                        {key: 'кровати',value: '2'},
+                        {key: 'ванные комнаты',value: '0'}]})
+          +input-field({heading: 'dropdown', 
+                      status: 'default', 
+                      type: 'text', 
+                      placeholder: 'Комнаты', 
+                      value: 'Комнаты',
+                      class: 'dropdown focused',
+                      isDropdown: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'toString',
+                      dropdownData: [
+                      {key: 'спальни',value: '2'},
+                      {key: 'кровати',value: '2'},
+                      {key: 'ванные комнаты',value: '0'}]})
+
+      .form-elements-container
+        +input-field({heading: 'dropdown', 
+                      status: 'default', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown focused',
+                      isDropdown: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'count',
+                      dropdownData: [
+                      {key: 'взрослые',value: '0'},
+                      {key: 'дети',value: '0'},
+                      {key: 'младенцы',value: '0'}]})
+      
+      .form-elements-container
+        +input-field({heading: 'dropdown', 
+                      status: 'default', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown focused',
+                      isDropdown: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'count',
+                      dropdownData: [
+                      {key: 'взрослые',value: '2'},
+                      {key: 'дети',value: '1'},
+                      {key: 'младенцы',value: '0'}]})
+                   

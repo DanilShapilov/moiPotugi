@@ -93,7 +93,8 @@
   z-index: 99;
   background-color: #fff;
 }
-.input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block{
+.input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block,
+.input-field .input-field_dropdown-block-wrapper .input-field_dropdown-block-buttons{
   display: flex;
   height: 40px;
   align-items: center;
