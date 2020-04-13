@@ -302,15 +302,8 @@ block content
                         paragraphText: '',
                         isChecked: false})
         
-        //- .form-elements-short-container
-        +icon-text-list({ img: 'smiley-face.svg',
-                          alt: 'smiley-face icon',
-                          headingText: 'Комфорт',
-                          paragraphText: 'Шумопоглощающие стены'})
-        +icon-text-list({ img: 'location_city.svg',
-                          alt: 'location_city icon',
-                          headingText: 'Удобство',
-                          paragraphText: 'Окно в каждой из спален'})
+        
+        
 
       .form-elements-container
         +input-field({heading: 'dropdown', 
@@ -365,3 +358,21 @@ block content
             ['Нельзя с питомцами',
             'Без вечеринок и мероприятий',
             'Время прибытия — после 13:00,<br> а выезд до 12:00'])
+
+    .form-elements-wrapper.footer
+      .form-elements-container
+        +icon-text-list({ img: 'smiley-face.svg',
+                          alt: 'smiley-face icon',
+                          headingText: 'Комфорт',
+                          paragraphText: 'Шумопоглощающие стены'})
+        +icon-text-list({ img: 'location_city.svg',
+                          alt: 'location_city icon',
+                          headingText: 'Удобство',
+                          paragraphText: 'Окно в каждой из спален'})
+
+      +comment({img: 'person-logo.png',
+                name: 'Мурад Сарафанов',
+                when: '5 дней назад',
+                howManyLikes:12,
+                comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+

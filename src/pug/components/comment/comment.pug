@@ -1,0 +1,20 @@
+mixin comment(props)
+  -var img = '/assets/img/' + props.img;
+  -var name = props.name;
+  -var when = props.when;
+  -var howManyLikes = props.howManyLikes;
+  -var commentText = props.comment;
+
+  .comment
+    .comment-author
+      img.comment-img(src=img, alt="")
+      .comment-author_info-wrapper
+        span.comment_name=name
+        span.comment_when=when
+    .comment-wrapper
+      .comment-like
+        +like({id: 'likeComment1', 
+                    name: 'likeComment1Name',
+                    likesTotal: +howManyLikes,
+                    isChecked: true})
+      .comment-text #{commentText}
