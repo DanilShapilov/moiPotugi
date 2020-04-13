@@ -302,6 +302,8 @@ block content
                         paragraphText: '',
                         isChecked: false})
 
+        
+
       .form-elements-container
         +input-field({heading: 'dropdown', 
                       status: '', 
@@ -348,4 +350,10 @@ block content
                       {key: 'взрослые',value: '2'},
                       {key: 'дети',value: '1'},
                       {key: 'младенцы',value: '0'}]})
-                   
+
+        .form-elements-short-container.margin-for-elements-after-dropdown
+          .h3-ref bullet list
+          +bullet-list(
+            ['Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00,<br> а выезд до 12:00'])
