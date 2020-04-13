@@ -5,7 +5,11 @@
 import 'air-datepicker/dist/js/datepicker.js';
 import 'air-datepicker/dist/css/datepicker.css';
 
-import 'webpack-jquery-ui';
+// when import everything in jquery-ui it breaks air-date picker
+// import 'webpack-jquery-ui';
+// import 'webpack-jquery-ui/css';
+
+import 'webpack-jquery-ui/slider';
 import 'webpack-jquery-ui/css';
 
 // SCSS
