@@ -10,7 +10,6 @@ import 'air-datepicker/dist/css/datepicker.css';
 // import 'webpack-jquery-ui/css';
 
 import 'webpack-jquery-ui/slider';
-import 'webpack-jquery-ui/css';
 
 // SCSS
 import './assets/scss/main.scss'
