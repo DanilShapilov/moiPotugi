@@ -1,0 +1,15 @@
+.icon-text-list{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid $dark-5-color;
+  padding: 19px 0;
+  max-width: 275px;
+  .icon-text-list_text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    .headingText{
+      font-family: 'Conv_Montserrat-Bold';
+    }
+  }
+}

@@ -1,0 +1,10 @@
+mixin icon-text-list(props)
+  -var img = '/assets/img/' + props.img;
+  -var alt = props.alt;
+  -var headingText = props.headingText;
+  -var paragraphText = props.paragraphText;
+  .icon-text-list
+    img(src=img, alt=alt)
+    .icon-text-list_text
+      span.headingText #{headingText}
+      span.paragraphText #{paragraphText}
