@@ -15,7 +15,7 @@
   width: 320px;
   .input-field,
   .date-field{
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
   .checkbox,
   .radio,
@@ -26,6 +26,7 @@
 
   .date-fields-on-one-row{
     margin-top: 40px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
