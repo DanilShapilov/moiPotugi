@@ -70,6 +70,19 @@
   .range-slider{
     margin-top: -20px;
   }
+
+  &.margin-for-elements-after-dropdown{
+    margin-top: 250px;
+    .h3-ref{
+      margin-bottom: 18px;
+    }
+  }
+  &.margin-for-expandable-checkbox-list{
+    margin-top: 172px;
+    .expandable{
+      margin-top: 50px;
+    }
+  }
 }
 
 

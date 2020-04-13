@@ -1,0 +1,19 @@
+.expandable{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 14px;
+  cursor: pointer;
+  &.not-expanded{
+    img{
+      transform: rotateX(180deg);
+    }
+  }
+  img{
+    opacity: .5;
+  }
+  
+}
+.expandable-wrapper{
+  padding-top: 7px;
+}

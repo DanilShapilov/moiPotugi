@@ -33,8 +33,22 @@
 
   .checkbox-text{
     display: flex;
+    flex-direction: column;
     line-height: 18px;
     color: $dark-50-color;
-    
+
+    .checkbox-text_heading{
+      font-family: 'Conv_Montserrat-Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark-75-color;
+      margin-bottom: 6px;
+    }
+    .checkbox-text_paragraph{
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }

@@ -205,7 +205,7 @@ block content
                         {key: 'кровати',value: '2'},
                         {key: 'ванные комнаты',value: '0'}]})
           +input-field({heading: 'dropdown', 
-                      status: 'default', 
+                      status: 'expanded', 
                       type: 'text', 
                       placeholder: 'Комнаты', 
                       value: 'Комнаты',
@@ -218,9 +218,93 @@ block content
                       {key: 'кровати',value: '2'},
                       {key: 'ванные комнаты',value: '0'}]})
 
+        .form-elements-short-container.margin-for-expandable-checkbox-list
+          +expandable('expandable checkbox list', true)
+            +checkbox({ id: 'expandableCheckboxId1', 
+                        name: 'inputName',
+                        headingText: 'Завтрак',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId2', 
+                        name: 'inputName',
+                        headingText: 'Письменный стол',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId3', 
+                        name: 'inputName',
+                        headingText: 'Стул для кормления',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId4', 
+                        name: 'inputName',
+                        headingText: 'Кроватка',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId5', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId6', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId7', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId8', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+          +expandable('expandable checkbox list', false)
+            +checkbox({ id: 'expandableCheckboxId1', 
+                        name: 'inputName',
+                        headingText: 'Завтрак',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId2', 
+                        name: 'inputName',
+                        headingText: 'Письменный стол',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId3', 
+                        name: 'inputName',
+                        headingText: 'Стул для кормления',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId4', 
+                        name: 'inputName',
+                        headingText: 'Кроватка',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId5', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId6', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId7', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId8', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+
       .form-elements-container
         +input-field({heading: 'dropdown', 
-                      status: 'default', 
+                      status: '', 
                       type: 'text', 
                       placeholder: 'Сколько гостей', 
                       value: 'Сколько гостей',
@@ -233,10 +317,25 @@ block content
                       {key: 'взрослые',value: '0'},
                       {key: 'дети',value: '0'},
                       {key: 'младенцы',value: '0'}]})
+
+        
+        .form-elements-short-container.margin-for-elements-after-dropdown
+          .h3-ref Rich Checkbox Buttons
+          // id name headingText paragraphText isChecked
+          +checkbox({ id: 'richCheckboxId1', 
+                      name: 'inputName',
+                      headingText: 'Широкий коридор',
+                      paragraphText: 'Ширина коридоров в номере не менее 91 см.',
+                      isChecked: false})
+          +checkbox({ id: 'richCheckboxId2', 
+                      name: 'inputName',
+                      headingText: 'Помощник для инвалидов',
+                      paragraphText: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                      isChecked: false})
       
       .form-elements-container
         +input-field({heading: 'dropdown', 
-                      status: 'default', 
+                      status: '', 
                       type: 'text', 
                       placeholder: 'Сколько гостей', 
                       value: 'Сколько гостей',

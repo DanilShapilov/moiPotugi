@@ -1,0 +1,9 @@
+mixin expandable(text,isHidden)
+  .h3-ref.expandable(class=`${isHidden == true ? 'not-expanded' : ''}`) #{text} 
+    img(src="/assets/img/expand_more.svg", alt="expand arrow icon", srcset="")
+  if isHidden
+    .expandable-wrapper(style='display: none;')
+      block
+  else
+    .expandable-wrapper(style='')
+      block

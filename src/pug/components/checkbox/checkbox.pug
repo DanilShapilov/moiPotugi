@@ -1,6 +1,6 @@
 include ../text/text
 
-// id name headingText paragraphText
+// id name headingText paragraphText isChecked
 mixin checkbox(props)
   -var elId = props.id;
   -var elName = props.name;
@@ -13,4 +13,8 @@ mixin checkbox(props)
     input(type="checkbox", name=elName, id=elId, checked=elIsChecked)
     .checkbox-custom
     .checkbox-text
-      span #{elHeadingText}
+      if elParagraphText !== ''
+        span.checkbox-text_heading #{elHeadingText}
+        span.checkbox-text_paragraph #{elParagraphText}
+      else
+        span #{elHeadingText}
