@@ -1,0 +1,27 @@
+.find-room{
+  width: 380px;
+  background-color: #fff;
+  padding: 40px 30px 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  
+  .input-field,
+  .date-field{
+    margin-top: 20px;
+  }
+  .btn.btnWide{
+    margin-top: 30px;
+  }
+
+  .find-room_date-fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .date-field{
+      flex-basis: 150px;
+    }
+  }
+}

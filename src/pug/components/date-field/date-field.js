@@ -1,5 +1,5 @@
 let datePicker = $('.date').datepicker({
-  // minDate: new Date(),
+  minDate: new Date(),
   range: true,
   toggleSelected: false,
   multipleDatesSeparator: ' - ',

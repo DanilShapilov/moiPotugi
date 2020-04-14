@@ -5,10 +5,21 @@ block variables
   - var description = 'Cards description'
 
 block content
-  .container
+  .container(style="background-color: #E5E5E5; min-height: 100vh;")
     include ../../components/logo/logo
     +logo('grey')
+    include ../../components/find-room/find-room
+    include ../../components/sign-up/sign-up
+    include ../../components/sign-in/sign-in
+    include ../../components/reservation/reservation
+    include ../../components/room-preview/room-preview
     
-    .form-elements-wrapper
-      .form-elements-container
-        
+    .cards-elements-wrapper
+      //- .cards-elements-container
+      +find-room()
+
+      //-
+        +sign-up()
+        +sign-in()
+        +reservation()
+        +room-preview()

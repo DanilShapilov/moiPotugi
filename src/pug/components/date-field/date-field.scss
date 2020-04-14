@@ -82,20 +82,26 @@
   font-size: 12px;
   line-height: 15px;
   padding: 11px 12px 0;
+  .datepicker--pointer{
+    display: none;
+  }
 
   .datepicker--cells{
     justify-content: center ;
     .datepicker--cell{
       border-radius: 50%;
 
-// when single .custom.datepicker .datepicker--cells .datepicker--cell.-selected-
+// when current/single .custom.datepicker .datepicker--cells .datepicker--cell.-selected-
 // range between  .datepicker--cell datepicker--cell-day -in-range-
 // when range     .datepicker--cell datepicker--cell-day -range-from- -selected-
 //                .datepicker--cell datepicker--cell-day -range-to- -selected-
 
       position: relative;
-      &.-selected-{
+      
+      &.-selected-,
+      &.-current-{
         background-image: $secondary-linear-gradient;
+        color: #fff;
         &.-range-from-{
           background-image: $primary-linear-gradient;
           &::after{

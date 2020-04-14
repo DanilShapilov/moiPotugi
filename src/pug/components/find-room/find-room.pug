@@ -1,0 +1,38 @@
+mixin find-room()
+  .find-room
+    h1.h1-ref Найдём номера под ваши пожелания
+    .find-room_date-fields
+          +date-field({heading: 'прибытие', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date-start dropdown'})
+          +date-field({heading: 'выезд', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date-end dropdown'})
+    +input-field({heading: 'гости', 
+                      status: '', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown',
+                      isDropdown: true,
+                      addButtons: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'count',
+                      dropdownData: [
+                      {key: 'взрослые',value: '0'},
+                      {key: 'дети',value: '0'},
+                      {key: 'младенцы',value: '0'}]})
+    +buttons({type:'fill',
+                  text: 'подобрать номер',
+                  isWide: true}
+                )
