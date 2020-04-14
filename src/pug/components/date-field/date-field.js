@@ -1,4 +1,3 @@
-debugger
 let datePicker = $('.date').datepicker({
   // minDate: new Date(),
   range: true,
