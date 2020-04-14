@@ -1,0 +1,23 @@
+mixin sign-in()
+  .sign-in
+    h1.h1-ref Войти
+    .sign-in_email-pass
+      +input-field({heading: '', 
+                      status: '', 
+                      type: 'email', 
+                      placeholder: 'Email'})
+      +input-field({heading: '', 
+                      status: '', 
+                      type: 'password', 
+                      placeholder: 'Пароль'})
+
+    +buttons({type:'fill',
+              text: 'войти',
+              isWide: true}
+            )
+    .sign-in_have-account
+      span Нет аккаунта на Toxin?
+      +buttons({type:'stroke',
+                text: 'создать',
+                isWide: false}
+              )

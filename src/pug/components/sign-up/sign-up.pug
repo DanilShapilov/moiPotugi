@@ -1,0 +1,55 @@
+mixin sign-up()
+  .sign-up
+    h1.h1-ref Регистрация аккаунта
+    .sign-up_name-gender
+      +input-field({heading: '', 
+                        status: '', 
+                        type: 'text', 
+                        placeholder: 'Имя'})
+      +input-field({heading: '', 
+                        status: '', 
+                        type: 'text', 
+                        placeholder: 'Фамилия'})
+      .radio-container
+        +radio({id: 'genderMale', 
+                name: 'genderMale',
+                headingText: 'Мужчина',
+                isChecked: true})
+        +radio({id: 'genderFemale', 
+                name: 'genderFemale',
+                headingText: 'Женщина',
+                isChecked: false})
+
+    +input-field({heading: 'дата рождения', 
+                      status: '', 
+                      type: 'text',
+                      pattern: 'dd.MM.yyyy', 
+                      placeholder: 'ДД.ММ.ГГГГ', 
+                      value: '',
+                      class: ''})
+    
+    .sign-up_email-pass
+      +input-field({heading: 'данные для входа в сервис', 
+                      status: '', 
+                      type: 'email', 
+                      placeholder: 'Email'})
+      +input-field({heading: '', 
+                      status: '', 
+                      type: 'password', 
+                      placeholder: 'Пароль'})
+      +toggle({id: 'toggleGetSpecialOffers', 
+                  name: 'toggleGetSpecialOffers',
+                  headingText: 'Получать спецпредложения',
+                  paragraphText: '',
+                  isChecked: false})
+
+    +buttons({type:'fill',
+              text: 'перейти к оплате',
+              isWide: true}
+            )
+    .sign-up_have-account
+      span Уже есть аккаунт на Toxin
+      +buttons({type:'stroke',
+                text: 'ВОЙТИ',
+                isWide: false}
+              )

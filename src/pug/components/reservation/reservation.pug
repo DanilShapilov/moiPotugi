@@ -1,0 +1,47 @@
+mixin reservation()
+  .reservation
+    h1.h1-ref.reservation_room-number
+      span.reservation_number-symbol №
+      |888
+      span.reservation_room-type люкс
+      span.reservation_room-price(data-price=9990) 
+        |9 990₽
+        span в сутки
+
+    .reservation_date-fields
+          +date-field({heading: 'прибытие', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date-start dropdown'})
+          +date-field({heading: 'выезд', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date-end dropdown'})
+                        
+    +input-field({heading: 'гости', 
+                      status: '', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown',
+                      isDropdown: true,
+                      addButtons: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'count',
+                      dropdownData: [
+                      {key: 'взрослые',value: '0'},
+                      {key: 'дети',value: '0'},
+                      {key: 'младенцы',value: '0'}]})
+
+    +buttons({type:'fill',
+              text: 'забронировать',
+              isWide: true}
+            )

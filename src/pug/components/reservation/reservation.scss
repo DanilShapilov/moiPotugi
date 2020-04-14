@@ -1,0 +1,62 @@
+.reservation{
+  width: 380px;
+  background-color: #fff;
+  padding: 40px 30px 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+
+  .reservation_room-number{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    .reservation_number-symbol{
+      font-size: 14px;
+      line-height: 17px;
+      margin-right: .25em;
+    }
+    .reservation_room-type{
+      @extend .h3-ref;
+      color: $primary-color !important;
+      margin-left: .46em;
+    }
+    .reservation_room-price{
+      margin-left: auto;
+      font-family: 'Conv_Montserrat-Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: $dark-50-color;
+      span{
+        font-family: 'Conv_Montserrat-Regular';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        margin-left: .26em;
+      }
+    }
+  }
+  
+  .input-field,
+  .date-field{
+    margin-top: 20px;
+  }
+
+  .reservation_date-fields{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .date-field{
+      flex-basis: 150px;
+    }
+  }
+
+
+  .btn.btnWide{
+    margin-top: 15px;
+  }
+}

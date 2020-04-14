@@ -1,5 +1,5 @@
 .btn{
-  height: 44px;
+  height: 44px;  
   position: relative;
   padding: 0 20px;
   border-radius: 22px;
@@ -33,6 +33,7 @@
     margin: 2px;
     height: 40px;
     padding: 0 18px;
+    
     
     color: $primary-color;
     &::after{
