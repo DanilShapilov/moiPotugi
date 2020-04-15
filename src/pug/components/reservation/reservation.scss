@@ -56,7 +56,57 @@
   }
 
 
+
+  .reservation_total-price{
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+
+    .reservation_price-per-days{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .reservation_room-price{
+        .reservation_room-price-multiplier{
+          margin-left: .26em;
+        }
+      }
+    }
+
+    .reservation_services-price,
+    .reservation_additional-services{
+      display: flex;
+      flex-direction: row;
+      margin-top: 15px;
+      .reservation_services-name{
+        width: 214px;
+      }
+      .reservation_exclamation-point{
+        width: 20px;
+        height: 20px;
+        background-image: url('/assets/img/exclamation-point.svg');
+        background-repeat: no-repeat;
+        margin-left: .26em;
+      }
+      .reservation_discount{
+        margin-left: .26em;
+      }
+      .rservation_services-total-price,
+      .reservation_additional-services-price{
+        margin-left: auto;
+      }
+    }
+    .reservation_total-price-counted{
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @extend .h2-ref
+    }
+  }
+
   .btn.btnWide{
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }

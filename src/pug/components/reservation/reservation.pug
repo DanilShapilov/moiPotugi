@@ -41,6 +41,28 @@ mixin reservation()
                       {key: 'дети',value: '0'},
                       {key: 'младенцы',value: '0'}]})
 
+    .reservation_total-price
+      .reservation_price-per-days
+        span.reservation_room-price(data-price=9990) 
+          |9 990₽
+          span.reservation_room-price-multiplier(data-multiplier=4) x 4 суток
+        span.reservation_room-price-counted 39 960₽
+      
+      .reservation_services-price 
+        span.reservation_services-name Сбор за услуги:
+          span.reservation_discount(data-discount=2179) скидка 2 179₽
+        .reservation_exclamation-point(title='Описаник услуги')
+        span.rservation_services-total-price(data-services=0) 0₽
+      
+      .reservation_additional-services
+        span.reservation_services-name Сбор за дополнительные услуги
+        .reservation_exclamation-point(title='Описаник услуги')
+        span.reservation_additional-services-price(data-additional-services=300) 300₽
+
+      .reservation_total-price-counted
+        span.reservation_total-price-text Итого
+        span.reservation_total-price-number(data-price-total=38081) 38 081₽
+
     +buttons({type:'fill',
               text: 'забронировать',
               isWide: true}
