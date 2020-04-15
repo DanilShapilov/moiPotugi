@@ -1,0 +1,32 @@
+mixin room-preview(props)
+  -var roomNumber = props.roomNumber;
+  -var numOfReviews = props.numOfReviews;
+  -var roomPrice = props.roomPrice;
+  -var starRating = props.starRating;
+
+  .room-preview
+    .room-preview_image-slider
+      .room-preview_image-slider-arrow.room-preview_image-slider-arrow--left
+      .room-preview_image-slider-arrow.room-preview_image-slider-arrow--right
+      .room-preview_image-slider-pics-selector
+        ul
+          li.choosed
+          li
+          li
+          li
+      img(src=`/assets/img/room${roomNumber}.jpg`, alt="room photo", srcset="")
+    .room-preview_wrapper
+      h1.h1-ref.room-preview_room-number
+        span.room-preview_number-symbol №
+        |#{roomNumber}
+        span.room-preview_room-type люкс
+        span.room-preview_room-price(data-price=roomPrice) 
+          |#{roomPrice} ₽
+          span в сутки
+
+      .room-preview_rating
+        +rate({starsAmount: 5, starsChoosed: starRating, nameOfId: `room${roomNumber}`})
+        span.room-preview_reviews
+          |#{numOfReviews}
+          span Отзывов
+        
