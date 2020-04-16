@@ -1,0 +1,19 @@
+.search-room{
+  .container.search-room_container{
+    padding: 0 140px;
+    display: flex;
+    flex-direction: row;
+    .search-room_left-side{
+      width: 266px;
+      .range-slider{
+        margin-top: -20px;
+      }
+      .range-slider_after-text{
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+}
+
+

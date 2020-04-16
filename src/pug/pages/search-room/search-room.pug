@@ -1,0 +1,131 @@
+extends ../../layout/main
+
+block variables
+  - var title = 'Landing Page'
+  - var description = 'Landing Page description'
+
+block content
+
+  include ../../components/header/header
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+
+  +header({loggedIn: false})
+  
+  
+  .search-room
+    .container.search-room_container
+      .search-room_left-side
+        +date-field({heading: 'даты пребывания в отеле', 
+                        status: '', 
+                        type: 'text',
+                        pattern: 'dd.MM.yyyy', 
+                        placeholder: 'ДД.ММ.ГГГГ', 
+                        value: '',
+                        isDropdown: true,
+                        class: 'date dropdown'})
+        +input-field({heading: 'Гости', 
+                      status: '', 
+                      type: 'text', 
+                      placeholder: 'Сколько гостей', 
+                      value: 'Сколько гостей',
+                      class: 'dropdown',
+                      isDropdown: true,
+                      addButtons: true,
+                      readonly: 'readonly',
+                      whatToDoWithValues: 'count',
+                      dropdownData: [
+                      {key: 'взрослые',value: '0'},
+                      {key: 'дети',value: '0'},
+                      {key: 'младенцы',value: '0'}]})
+        .h3-ref диапазон цены
+        +range-slider()
+        span.range-slider_after-text Стоимость за сутки пребывания в номере
+        +checkbox({ id: 'checkboxId1', 
+                      name: 'inputName',
+                      headingText: 'Можно курить',
+                      paragraphText: '',
+                      isChecked: false})
+        +checkbox({ id: 'checkboxId2', 
+                    name: 'inputName',
+                    headingText: 'Можно с питомцами',
+                    paragraphText: '',
+                    isChecked: true})
+        +checkbox({ id: 'checkboxId3', 
+                    name: 'inputName',
+                    headingText: 'Можно пригласить гостей (до 10 человек)',
+                    paragraphText: '',
+                    isChecked: true})
+        .h3-ref Rich Доступность
+        +checkbox({ id: 'richCheckboxId1', 
+                    name: 'inputName',
+                    headingText: 'Широкий коридор',
+                    paragraphText: 'Ширина коридоров в номере не менее 91 см.',
+                    isChecked: false})
+        +checkbox({ id: 'richCheckboxId2', 
+                    name: 'inputName',
+                    headingText: 'Помощник для инвалидов',
+                    paragraphText: 'На 1 этаже вас встретит специалист и проводит до номера.',
+                    isChecked: false})
+        +input-field({heading: 'удобства номера', 
+                        status: 'default', 
+                        type: 'text', 
+                        placeholder: 'Комнаты', 
+                        value: 'Комнаты',
+                        class: 'dropdown',
+                        isDropdown: true,
+                        readonly: 'readonly',
+                        whatToDoWithValues: 'toString',
+                        dropdownData: [
+                        {key: 'спальни',value: '2'},
+                        {key: 'кровати',value: '2'},
+                        {key: 'ванные комнаты',value: '0'}]})
+        +expandable('expandable checkbox list', true)
+            +checkbox({ id: 'expandableCheckboxId1', 
+                        name: 'inputName',
+                        headingText: 'Завтрак',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId2', 
+                        name: 'inputName',
+                        headingText: 'Письменный стол',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId3', 
+                        name: 'inputName',
+                        headingText: 'Стул для кормления',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId4', 
+                        name: 'inputName',
+                        headingText: 'Кроватка',
+                        paragraphText: '',
+                        isChecked: true})
+            +checkbox({ id: 'expandableCheckboxId5', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId6', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId7', 
+                        name: 'inputName',
+                        headingText: 'Телевизор',
+                        paragraphText: '',
+                        isChecked: false})
+            +checkbox({ id: 'expandableCheckboxId8', 
+                        name: 'inputName',
+                        headingText: 'Шампунь',
+                        paragraphText: '',
+                        isChecked: false})
+         
+      .serch-room_main-content
+      
+  
+
+    
+  +footer-with-copyright()
+    
