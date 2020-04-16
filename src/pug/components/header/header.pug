@@ -1,9 +1,38 @@
 include ../text/text
 include ../logo/logo
-mixin header()
+mixin header(props)
+  -var loggedIn = props.loggedIn;
+  -var userName = props.userName;
   .header&attributes(attributes)
-    .container
+    .container.header-container
       .header-website-logo
-        +logo('colored')
+        +logo('colored-text')
 
-    
+      ul.header_menu
+        li
+          a(href="#").current Home
+        li
+          a(href="#") About Us
+        li
+          a(href="#") Services
+        li
+          a(href="#") Careers
+        li
+          a(href="#") News
+        li
+          a(href="#") Documentation
+      .header_user-status
+        if loggedIn === false
+          +buttons({type:'stroke',
+                    text: 'login',
+                    isWide: false}
+                  )
+          +buttons({type:'fill',
+                    text: 'register',
+                    isWide: false}
+                  )
+        else if loggedIn !== false
+          .header_logged-in-user-decoration-line
+          a(href='#').header_user-name=userName
+
+          

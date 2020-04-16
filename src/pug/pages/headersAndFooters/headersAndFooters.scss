@@ -1,9 +1,13 @@
-.headers-wrapper{
+.headers-footers-wrapper{
     position: absolute;
     width: 100%;
     top: 150px;
     z-index: 1;
   .header{
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+  }
+  .footer-creative,
+  .footer-with-copyright{
+    margin-bottom: 40px;
   }
 }

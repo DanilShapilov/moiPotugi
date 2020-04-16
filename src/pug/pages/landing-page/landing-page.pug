@@ -1,0 +1,28 @@
+extends ../../layout/main
+
+block variables
+  - var title = 'Headers & Footers'
+  - var description = 'Headers & Footers description'
+
+block content
+
+  include ../../components/header/header
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+  include ../../components/find-room/find-room
+
+  +header({loggedIn: false})
+  
+  
+  .landing-page
+    .container.landing-page_container
+      +find-room()
+      .landing-page_slideshow-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    .landing-page_slideshow-pics
+      img(src="/assets/img/big-room1.jpg", alt="room slideshow image")
+      
+  
+
+    
+  +footer-with-copyright()
+    

@@ -7,9 +7,17 @@ block variables
 block content
 
   include ../../components/header/header
-  .headers-wrapper
-    +header()
-    +header().--logged-in
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+  .headers-footers-wrapper
+    +header({loggedIn: false})
+    +header({ loggedIn: true,
+              userName: 'Cosmin Negoita'})
+    
+    +footer-with-copyright()
+    +footer-creative()
+  
+
 
   .container(style="background-color: #E5E5E5; min-height: 100vh;")
     include ../../components/logo/logo

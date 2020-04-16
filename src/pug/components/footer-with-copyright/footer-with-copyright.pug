@@ -1,0 +1,61 @@
+include ../text/text
+include ../logo/logo
+mixin footer-with-copyright()
+  .footer-with-copyright&attributes(attributes)
+    .container.footer-with-copyright-container
+      .footer-with-copyright-website-logo
+        +logo('colored-text')
+        .footer-with-copyright-website-logo-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+
+      ul.footer-with-copyright_links
+        .footer-with-copyright_links-section-name.h3-ref навигация
+        li
+          a(href="#") About Us
+        li
+          a(href="#") News
+        li
+          a(href="#") Support
+        li
+          a(href="#") Products
+
+      ul.footer-with-copyright_links
+        .footer-with-copyright_links-section-name.h3-ref ABOUT US
+        li
+          a(href="#") Who we are
+        li
+          a(href="#") Our team
+        li
+          a(href="#") Careers
+        li
+          a(href="#") Investors
+      
+      ul.footer-with-copyright_links
+        .footer-with-copyright_links-section-name.h3-ref support
+        li
+          a(href="#") Documentation
+        li
+          a(href="#") Community
+        li
+          a(href="#") Get in Touch
+      
+      ul.footer-with-copyright_links
+        .footer-with-copyright_links-section-name.h3-ref Subscribe to our newsletter
+        li Receive our latest news and promotions in your inbox!
+        li
+          +input-field-subscription({heading: '', 
+                                    status: '', 
+                                    type: 'email', 
+                                    placeholder: 'Email', 
+                                    value: '',
+                                    class: ''})
+
+    .footer-with-copyright-copyright
+      .container.footer-with-copyright-container
+        span Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .footer-with-copyright-socials
+          a(href="#", target="_blank")
+            img(src="/assets/img/twitter.svg", alt="twitter social button")
+          a(href="#", target="_blank")
+            img(src="/assets/img/facebook.svg", alt="facebook social button")
+          a(href="#", target="_blank")
+            img(src="/assets/img/inst.svg", alt="instagram social button")

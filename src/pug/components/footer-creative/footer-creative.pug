@@ -1,0 +1,16 @@
+include ../text/text
+include ../logo/logo
+mixin footer-creative()
+  .footer-creative&attributes(attributes)
+    .container.footer-creative-container
+      .footer-creative-website-logo
+        +logo('colored-text')
+        .footer-creative-website-logo-text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+
+        .footer-creative-socials
+          a(href="#", target="_blank")
+            img(src="/assets/img/twitter.svg", alt="twitter social button")
+          a(href="#", target="_blank")
+            img(src="/assets/img/facebook.svg", alt="facebook social button")
+          a(href="#", target="_blank")
+            img(src="/assets/img/inst.svg", alt="instagram social button")
