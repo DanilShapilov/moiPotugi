@@ -1,7 +1,7 @@
 include ../text/text
 
 mixin input-field(props)
-  .input-field
+  .input-field&attributes(attributes)
     .input-field_text-wrapper
       +text('h3', props.heading).h3-ref
       +text('h3', props.status).h3-ref.input-field--status

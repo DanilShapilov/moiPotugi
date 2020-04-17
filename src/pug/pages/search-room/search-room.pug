@@ -9,6 +9,7 @@ block content
   include ../../components/header/header
   include ../../components/footer-with-copyright/footer-with-copyright
   include ../../components/footer-creative/footer-creative
+  include ../../components/room-preview/room-preview
 
   +header({loggedIn: false})
   
@@ -38,9 +39,10 @@ block content
                       {key: 'взрослые',value: '0'},
                       {key: 'дети',value: '0'},
                       {key: 'младенцы',value: '0'}]})
-        .h3-ref диапазон цены
+        .h3-ref.range-slider_heading диапазон цены
         +range-slider()
         span.range-slider_after-text Стоимость за сутки пребывания в номере
+        .h3-ref.checkbox_heading-text Checkbox Buttons
         +checkbox({ id: 'checkboxId1', 
                       name: 'inputName',
                       headingText: 'Можно курить',
@@ -56,7 +58,7 @@ block content
                     headingText: 'Можно пригласить гостей (до 10 человек)',
                     paragraphText: '',
                     isChecked: true})
-        .h3-ref Rich Доступность
+        .h3-ref.checkbox_heading-text Доступность
         +checkbox({ id: 'richCheckboxId1', 
                     name: 'inputName',
                     headingText: 'Широкий коридор',
@@ -68,19 +70,19 @@ block content
                     paragraphText: 'На 1 этаже вас встретит специалист и проводит до номера.',
                     isChecked: false})
         +input-field({heading: 'удобства номера', 
-                        status: 'default', 
+                        status: '', 
                         type: 'text', 
                         placeholder: 'Комнаты', 
                         value: 'Комнаты',
-                        class: 'dropdown',
+                        class: 'dropdown search-room--margin-top',
                         isDropdown: true,
                         readonly: 'readonly',
                         whatToDoWithValues: 'toString',
                         dropdownData: [
                         {key: 'спальни',value: '2'},
                         {key: 'кровати',value: '2'},
-                        {key: 'ванные комнаты',value: '0'}]})
-        +expandable('expandable checkbox list', true)
+                        {key: 'ванные комнаты',value: '0'}]}).input-field--top-margin
+        +expandable('дополнительные удобства', true)
             +checkbox({ id: 'expandableCheckboxId1', 
                         name: 'inputName',
                         headingText: 'Завтрак',
@@ -121,10 +123,14 @@ block content
                         headingText: 'Шампунь',
                         paragraphText: '',
                         isChecked: false})
-         
+        
       .serch-room_main-content
-      
-  
+        h1.h1-ref.serch-room_main-content-text Номера, которые мы для вас подобрали
+        -var rooms = [{roomNumber: 888,numOfReviews: 145,roomPrice: 9990,starRating: 5},{roomNumber: 840,numOfReviews: 65,roomPrice: 9900,starRating: 4},{roomNumber: 980,numOfReviews: 35,roomPrice: 8500,starRating: 3},{roomNumber: 856,numOfReviews: 19,roomPrice: 7300,starRating: 5},{roomNumber: 740,numOfReviews: 44,roomPrice: 6000,starRating: 4},{roomNumber: 982,numOfReviews: 56,roomPrice: 5800,starRating: 3},{roomNumber: 678,numOfReviews: 45,roomPrice: 5500,starRating: 5},{roomNumber: 450,numOfReviews: 39,roomPrice: 5300,starRating: 4},{roomNumber: 350,numOfReviews: 77,roomPrice: 5000,starRating: 3},{roomNumber: 666,numOfReviews: 25,roomPrice: 5000,starRating: 5},{roomNumber: 444,numOfReviews: 15,roomPrice: 5000,starRating: 3},{roomNumber: 352,numOfReviews: 55,roomPrice: 5000,starRating: 3}]
+          each room in rooms
+            +room-preview(room)
+        .search-room_pagination-wrapper
+          +pagination()
 
     
   +footer-with-copyright()
