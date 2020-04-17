@@ -9,10 +9,16 @@
     
     box-sizing: border-box;
     border-radius: 4px 4px 0 0;
-    overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
     position: relative;
+    img{
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%
+    }
     
     &:hover .room-preview_image-slider-arrow{
       opacity: 1;
@@ -63,9 +69,7 @@
         }
       }
     }
-    img{
-      flex-shrink: 0;
-    }
+    
   }
   .room-preview_wrapper{
     padding: 20px;
