@@ -1,0 +1,103 @@
+.room-details{
+  
+  .room-details_pics{
+    display: flex;
+    width: 100%;
+    height: 484px;
+    
+    .room-details_pics-big{
+      height: 100%;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      img{
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%
+      }
+    }
+    .room-details_pics-small-wrapper{
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      .room-details_pics-small{
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        img{
+          flex-shrink: 0;
+          min-width: 100%;
+          min-height: 100%
+        }
+      }
+    }
+    
+  }
+  .container.room-details_container{
+    padding: 0 140px;
+    height: 100%;
+    margin-top: 70px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+    .room-details_container-content{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      .h2-ref{
+        margin-bottom: 20px;
+      }
+      .room-details_info{
+        flex-shrink: 0;
+        margin-right: 70px;
+        margin-bottom: 17px;
+        .h2-ref{
+          margin-bottom: 2px;
+        }
+      }
+      .room-details_impression{
+        flex-shrink: 0;
+      }
+      .room-details_visitors-review{
+        flex-shrink: 0;
+        margin-bottom: 34px;
+        .comment{
+          margin-bottom: 22px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .room-details_rules{
+        flex-shrink: 0;
+        flex-basis: 300px;
+        .h2-ref{
+          margin-left: 20px;
+          margin-bottom: 18px;
+        }
+      }
+      .room-details_return{
+        flex-shrink: 0;
+        flex-basis: 340px;
+        .h2-ref{
+          margin-bottom: 18px;
+        }
+      }
+    }
+    .reservation{
+      align-self: baseline;
+      margin-left: 70px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+

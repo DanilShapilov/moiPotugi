@@ -1,0 +1,78 @@
+extends ../../layout/main
+
+block variables
+  - var title = 'Room details'
+  - var description = 'Room details description'
+
+block content
+
+  include ../../components/header/header
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+  include ../../components/reservation/reservation
+
+  +header({loggedIn: false})
+  
+  
+  .room-details
+    .room-details_pics
+      .room-details_pics-big
+        img(src="/assets/img/big-room888_1.jpg", alt="room 888 image")
+      .room-details_pics-small-wrapper
+        .room-details_pics-small
+          img(src="/assets/img/big-room888_2.jpg", alt="room 888 image")
+        .room-details_pics-small
+          img(src="/assets/img/big-room888_3.jpg", alt="room 888 image")
+    .container.room-details_container
+      .room-details_container-content
+        .room-details_info
+          h2.h2-ref Сведения о номере
+          +icon-text-list({ img: 'smiley-face.svg',
+                            alt: 'smiley-face icon',
+                            headingText: 'Комфорт',
+                            paragraphText: 'Шумопоглощающие стены'})
+          +icon-text-list({ img: 'location_city.svg',
+                            alt: 'location_city icon',
+                            headingText: 'Удобство',
+                            paragraphText: 'Окно в каждой из спален'})
+          +icon-text-list({ img: 'comfort.svg',
+                            alt: 'comfort icon',
+                            headingText: 'Уют',
+                            paragraphText: 'Номер оснащён камином'})
+        .room-details_impression
+          h2.h2-ref Впечатления от номера
+          img(src="/assets/img/room-impression.jpg", alt="room-impression")
+
+        .room-details_visitors-review
+          h2.h2-ref Отзывы посетителей номера
+          +comment({img: 'person-logo.png',
+                name: 'Мурад Сарафанов',
+                when: '5 дней назад',
+                howManyLikes:12,
+                comment: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'})
+          +comment({img: 'person-logo2.png',
+                name: 'Патрисия Стёклышкова',
+                when: 'неделю назад',
+                howManyLikes:2,
+                comment: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'})
+
+
+        .room-details_rules
+          h2.h2-ref Правила
+          +bullet-list(
+            ['Нельзя с питомцами',
+            'Без вечеринок и мероприятий',
+            'Время прибытия — после 13:00,<br> а выезд до 12:00'])
+
+        .room-details_return
+          h2.h2-ref Отмена
+          p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+        
+      +reservation()
+    
+      
+  
+
+    
+  +footer-with-copyright()
+    
