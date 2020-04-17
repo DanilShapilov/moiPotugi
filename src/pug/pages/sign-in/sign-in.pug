@@ -1,0 +1,28 @@
+extends ../../layout/main
+
+block variables
+  - var title = 'sign-in Page'
+  - var description = 'sign-in Page description'
+
+block content
+
+  include ../../components/header/header
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+  include ../../components/sign-in/sign-in
+
+  +header({loggedIn: false})
+  
+  
+  .sign-in-page
+    .container.sign-in-page_container
+      +sign-in()
+    .sign-in-page_slideshow-pics
+      .sign-in-page_slideshow-pic-wrapper
+        img(src="/assets/img/big-room_reg_signIn.jpg", alt="room slideshow image")
+      
+  
+
+    
+  +footer-with-copyright()
+    
