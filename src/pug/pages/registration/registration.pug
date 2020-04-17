@@ -1,0 +1,28 @@
+extends ../../layout/main
+
+block variables
+  - var title = 'registration Page'
+  - var description = 'registration Page description'
+
+block content
+
+  include ../../components/header/header
+  include ../../components/footer-with-copyright/footer-with-copyright
+  include ../../components/footer-creative/footer-creative
+  include ../../components/sign-up/sign-up
+
+  +header({loggedIn: false})
+  
+  
+  .registration-page
+    .container.registration-page_container
+      +sign-up()
+    .registration-page_slideshow-pics
+      .registration-page_slideshow-pic-wrapper
+        img(src="/assets/img/big-room_reg_signIn.jpg", alt="room slideshow image")
+      
+  
+
+    
+  +footer-with-copyright()
+    
