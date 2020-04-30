@@ -31,7 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "air-datepicker": "^2.2.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "vue": "^2.6.11",
     "webpack-jquery-ui": "^2.0.1"
   },
